@@ -1,0 +1,170 @@
+# MHWapp
+
+This interactive map holds all of the MHWs detected in the NOAA OISST data from 1982 to near real time. One may click on a pixel to then bring up a time series at that location. Data on climatologies, thresholds, and event metrics may be downloaded for any ocean pixel.
+
+
+# Updates
+
+* June 6th, 2019
+  * Added the climatology period used to the about section
+
+* May 31st, 2019
+  * Attempting to connect Google Analytics
+
+* May 29th, 2019
+  * Corrected typo in About section
+
+* May 28th, 2019
+  * Edited the text in the About section
+  * Added a link to the press release
+
+* May 27th, 2019
+  * Changed use of `plyr::ldply` to `plyr::l_ply` as this was causing issues
+
+* May 23rd, 2019
+  * Corrected a couple of typos in the welcome message
+  * Changed welcome popup to a modal window for more stability
+
+* May 21st, 2019
+  * MHW_daily.R now running at 22:00 AST via a cron job
+    * Reduced verbosity of output so that logs are more readable
+
+* May 16th, 2019
+  * Added coloured category filtering buttons
+  * Added info popup on start up
+  * Fixed weakness in logic trapping for daily updating script
+
+* May 15th, 2019
+  * Playing with coloured button options
+  * Added category colours to time series plot
+  * Removed category legend from map
+
+* March 18th, 2019
+  * Updated the animation script to create chosen animations of infamous MHWs
+
+* March 8th, 2019
+  * More aggressive error trapping
+  * Preventing access to pre-1985 data as these are apparently error prone
+
+* March 6th, 2019
+  * Added logic breaks to catch when the NOAA data are not up on the ERDDAP server
+  * Added screen to filter out erroneously high OISST data
+  * Added functionality to download preliminary data
+  * Updated pipeline to create new app files based on final data
+  * Preliminary data now a live part of the MHW results
+  * These changes are accounted for in the `about` section
+
+* February 14th, 2019
+  * Some tweaks to the daily scripts
+  * Added a "Why should I care?" section in the about panel
+  * Added a break in the category screening that should help with speed
+  
+* February 13th, 2019
+  * Two bug fixes
+  * A CSS overhaul
+  * Project-wide improvements to UI
+  * Edited about section to reflect changes
+
+* February 12th, 2019
+  * Updates to about section
+  * Added a bit more safety to daily script
+
+* February 11th, 2019
+  * Addressed heatspike issue
+  * Changed data syncing with app so no git pulling is required
+  * Smoothed out bugs in daily updating script
+  * Minor about section edits
+  
+* February 7th, 2019
+  * More snag list
+
+* February 6th, 2019
+  * Working through the snag list
+
+* February 5th, 2019
+  * Massive update to the About section
+
+* January 31, 2019
+  * More optimising of daily script
+
+* January 30, 2019
+  * Daily script complete and all 2018 data processed
+
+* January 29, 2019
+  * Began writing the daily script
+
+* January 25, 2019
+  * Solved the raster wrap-around issue
+  * Fixed/added several UI features
+
+* January 24, 2019
+  * Added full geom_flame visual output
+  * Expanded on label information
+
+* January 10, 2019
+  * Finished first draft of UI
+  * Experimenting with an entirely plotly based product
+
+* January 10, 2019
+  * Finished NetCDF back-end
+  * Finished native R back-end
+
+* January 9, 2019
+  * Work on shiny UI
+  * Work on NetCDF database
+
+* January 8, 2019
+  * More work on efficient SQL database construction
+  * Testing NetCDF lon slices as a viable option for daily OISST data
+
+* January 4, 2019
+  * Experimenting with visualising options
+  * Massive overhaul to the foundation of the app
+
+* January 3, 2019
+  * Playing around with SQLite data appending workflow
+
+* December 18, 2018
+  * Played around with mapping options
+  * All of 2017 data now live 
+
+* December 17, 2018
+  * Created basic SQL databases to deal with RAM issues
+
+* December 10, 2018
+  * Sorted out a basic NetCDF workflow
+  * Integrated NetCDF files into app
+  * Changed file pathways
+
+* December 5, 2018
+  * Scaled the data back to one month again
+  * Removed rate of onset and decline and introduced cumulative intensity
+  * Working on NetCDF data storage
+
+* December 4, 2018
+  * UI now allows for showing categories or event metrics per pixel
+
+* November 30, 2018
+  * Some old changes that needed pushing
+  * Playing with UI
+  * Added subset of event data
+
+* October 19, 2018
+  * Attempted to host all of 2017 data but it fell over
+  * Created a second instance at "MHWtracker"
+
+* October 18, 2018
+  * Global proof of concept
+  * Basic clickability added
+
+* October 11, 2018
+    * Playing about with popping the leaflet into shiny
+    * Basic product up and running
+
+* October 5, 2018
+    * Rather moving towards leaflet
+    * Made some baby steps
+    
+* September 25, 2018
+    * First push of initial MHW calculations for South Africa region
+    * An attempt was made at a basic plotly diagram

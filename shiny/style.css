@@ -1,0 +1,181 @@
+.shiny-output-error { visibility: hidden; }
+.shiny-output-error:before { visibility: hidden;}
+
+input[type="number"] {
+  max-width: 80%;
+}
+
+/* Customize fonts */
+  body, input, button, select { 
+    font-family: Myriad-Pro, Calibri, Arial, 'sans serif';
+    font-weight: 100;
+    	color: #494949;
+    		font-size: 15px;
+  }
+  
+h1, h2, h3, h4 { font-weight: 100; }
+ 
+button {
+  background-color: white;
+}
+
+label {
+  font-weight: 400 !important;
+  font-size: 15px !important;
+}
+
+
+/****************************************** ids **********************************/
+
+#loading-content {
+  position: absolute;
+  background: #000000;
+  opacity: 0.9;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+/****************************************** classes ********************************/
+
+.modal-lg {
+  width: 90%;
+}
+
+#map-modalTitle {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.wellpanel {
+  overflow-x:scroll; 
+    overflow-y:scroll; 
+  max-height: 400px; 
+  background-color: white;
+  font-size:100%;
+}
+
+#btn-customButtons {
+  background-color: black;
+}
+
+/****************************************** leaflets **********************************/
+.leaflet {height: calc(100vh) !important;}
+
+.leaflet .legend i{
+               border-radius: 100%;
+               width: 25px;
+               height: 25px;
+               margin-top: 5px;
+               border: 1px solid black;
+                  font-family: Myriad-Pro, Calibri, Arial, 'sans serif';
+                  font-weight:100;
+               }
+               
+.leaflet .legend {
+                background-color: rgba(250,250,250,0.8);
+                box-shadow: 0 4px 4px -2px rgba(0,0,0,.2); 
+  border: 1px solid black;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+  font-family: Myriad-Pro, Calibri, Arial, 'sans serif';
+                  font-weight:100;
+               }
+               
+.leaflet-control-layers {
+                background-color: rgba(250,250,250,1);
+                box-shadow: 0 4px 4px -2px rgba(0,0,0,1.0); 
+  border: 1px solid black;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,1.0);
+  font-family: Myriad-Pro, Calibri, Arial, 'sans serif';
+                  font-weight:100;
+                  color:#494949;
+               }
+               
+.leaflet-top {
+  z-index: 999 !important;
+  top: 60px;
+  left: 10px;
+}
+
+.leaflet-control {
+      border: 1px solid #2c3e50;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+  z-index: 1000;
+}
+
+
+/*********************** navbar css ****************************/
+.navbar .navbar-nav {float: right}
+
+.navbar-header {
+  padding: -10px -10px 0px 0px;
+  margin-left: -10px;
+}
+
+.navbar.navbar-default.navbar-static-top{
+  padding:0;
+  margin-bottom: 0px;
+  background: rgba(16,16,16,0.8);
+}
+
+.navbar-default {
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,0.2);
+  background-color: #8a73c9;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand {
+  color: #FFBA00;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #E0E0E0;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: #130206;
+}
+.navbar-default .navbar-nav > li > a {
+  color:  #E0E0E0;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #07A8FF;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #07A8FF;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #101010;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: #101010;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #07A8FF;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #E0E0E0;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #101010;
+  color:#07A8FF;
+}
+
