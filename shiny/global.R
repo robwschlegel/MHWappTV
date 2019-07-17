@@ -40,17 +40,13 @@ source("modules/about-ui.R", local = TRUE)
 source("modules/map-server.R", local = TRUE)
 source("modules/map-ui.R", local = TRUE)
 
-# mapbox_moon <- "https://api.mapbox.com/styles/v1/..."
-
 
 # Meta-data ---------------------------------------------------------------
 
 ### The dates currently processed
-nc <- nc_open("OISST/avhrr-only-v2.ts.1440.nc")
-current_dates <- as.Date(nc$dim$time$vals, origin = "1970-01-01")
-# tail(current_dates)
-nc_close(nc)
-# load("current_dates.RData")
+current_dates <- dir(dir("cat_clim", full.names = T), pattern = "cat.clim", full.names = T)
+current_dates <- sapply(strsplit(current_dates, split = "cat.clim."), "[[", 3)
+current_dates <- as.Date(sapply(strsplit(current_dates, split = ".Rda"), "[[", 1))
 
 ### Starting values
 initial_lat <- 45
@@ -73,7 +69,8 @@ seas_thresh_files <- dir("thresh", pattern = "MHW.seas.thresh.", full.names = T)
 #                                    full.names = TRUE, recursive = TRUE))
 
 ### The empty dataframe for the legend
-MHW_cat_clim_sub <- data.frame(category = c("I Moderate", "II Strong", "III Severe", "IV Extreme"))
+MHW_cat_clim_sub <- data.frame(category = factor(c("I Moderate", "II Strong", "III Severe", "IV Extreme"),
+                                                 levels = c("I Moderate", "II Strong", "III Severe", "IV Extreme")))
 
 ### The category colour pallette
 MHW_colours <- c(

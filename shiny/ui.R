@@ -1,6 +1,5 @@
 ui = tagList(shinyjs::useShinyjs(),  
-             tags$head(includeScript("google-analytics.js"),
-                       includeCSS("style.css")),
+             tags$head(includeCSS("style.css")),
              # Loading message
              div(
                id = "loading-content",
@@ -9,14 +8,13 @@ ui = tagList(shinyjs::useShinyjs(),
              # hidden(
                # div(
                  # id = "app-content",
-             navbarPage(title =  "Marine Heatwave Tracker",
+             navbarPage(title =  "Marine Heatwave Tracker", 
                         selected = 'Map',
                         tabPanel(title = 'Map',
                                  br(),
                                  mapUI('map')),
-                        tabPanel(title = 'About',
-                                 br(),
-                                 aboutUI('about')))
+                        header = tags$head(tags$style(type = 'text/css', ".irs-grid-text { font-size: 20pt; color: black}"),
+                                           tags$style(type = 'text/css', ".irs-text { font-size: 20pt; }")))
                # )
              # )
 )

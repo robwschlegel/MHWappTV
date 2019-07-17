@@ -114,6 +114,11 @@ label {
 .navbar-header {
   padding: -10px -10px 0px 0px;
   margin-left: -10px;
+  font-size: 20px;
+}
+
+.navbar-brand{
+  font-size: 30px;
 }
 
 .navbar.navbar-default.navbar-static-top{
