@@ -5,6 +5,9 @@ This global map shows much of the area around Nova Scotia and is designed to be 
 
 # Updates
 
+* July 18th, 2019
+  * Rolled back the animation as it was too beefy for the raspberry pi running it
+
 * July 17th, 2019
   * Removed most of the unneeded code for the interactive map content
   * Added an animated front page

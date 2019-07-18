@@ -22,7 +22,7 @@ map <- function(input, output, session) {
   
   ### Base map data before screening categories
   baseDataPre <- reactive({
-    date_filter <- input$date_choice
+    date_filter <- date_menu_choice
     year_filter <- lubridate::year(date_filter)
     sub_dir <- paste0("cat_clim/",year_filter)
     sub_file <- paste0(sub_dir,"/cat.clim.",date_filter,".Rda")
